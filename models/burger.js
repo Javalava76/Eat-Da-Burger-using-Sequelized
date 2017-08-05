@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  let Burger = sequelize.define("burger", {
+  let Burger = sequelize.define("Burger", {
     burger_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -9,15 +9,9 @@ module.exports = function (sequelize, DataTypes) {
     },
     devoured: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    sessionid: {
-      type: DataTypes.UUID,
-      allowNull: false,
-        }
-
+      defaultValue: false,
+    }
   });
-
   return Burger;
 };
 
